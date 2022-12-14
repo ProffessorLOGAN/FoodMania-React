@@ -1,9 +1,22 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
   return (
     <>
-      <h1>Welcome to FoodMania Website</h1>
+      <Router>
+        <Navbar />
+        <Routes>
+
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />} ></Route>
+
+        </Routes>
+
+      </Router>
     </>
   );
 }
