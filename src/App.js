@@ -1,8 +1,9 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import About from './pages/About';
+import Products from './pages/Products';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
         <Navbar />
         <Routes>
 
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/about" element={<About />} ></Route>
+          <Route path="/" element={<Home />} exact></Route>
+          <Route path="/products" element={<Products />} ></Route>
+          <Route path="/cart" element={<Cart />} ></Route>
 
         </Routes>
 
