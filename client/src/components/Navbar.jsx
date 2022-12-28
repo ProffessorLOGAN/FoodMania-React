@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+  const items = useSelector((state) => state.cart);
   return (
     <>
       <nav className="container mx-auto flex items-center justify-between py-4">
@@ -25,7 +28,7 @@ const Navbar = () => {
           <li className="ml-6 ">
             <Link to="/cart">
               <div className="flex items-center bg-green-400 py-0.5 px-3 rounded-3xl hover:bg-green-500">
-                <span className="text-black font-normal">20</span>
+                <span className="text-black font-normal">{items.length}</span>
                 <img
                   className="h-5 ml-2 "
                   src="https://i.pinimg.com/originals/04/e9/fa/04e9faefec96d862d481efc5703d8b3f.png"
