@@ -151,7 +151,7 @@ const productController = {
         try {
             documents = await Product.find()
                 .select('-updatedAt -__v')
-                .sort({ _id: -1 });
+                .sort({ _id: 1 });
         } catch (err) {
             return next(CustomErrorHandler.serverError());
         }

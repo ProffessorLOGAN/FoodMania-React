@@ -21,10 +21,10 @@ const Navbar = () => {
           <li className="hover:text-green-500">
             <Link to="/">Home</Link>
           </li>
-          <li className="ml-6 hover:text-green-500">
+          <li className="ml-2 hover:text-green-500">
             <Link to="/products">Products</Link>
           </li>
-          <li className="ml-6 ">
+          <li className="ml-4 ">
             <Link to="/cart">
               <div className="flex items-center bg-green-400 py-0.5 px-3 rounded-3xl hover:bg-green-500">
                 <span className="text-black font-normal">{0}</span>
