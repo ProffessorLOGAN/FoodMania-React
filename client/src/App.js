@@ -5,11 +5,28 @@ import Home from './pages/Home';
 import ProductsPage from './pages/ProductsPage';
 import Cart from './pages/Cart';
 import SingleProduct from './pages/SingleProduct';
+import { CartContext } from './CartContext';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [cart, setCart] = useState({});
+
+  //Fetch cart from local storage
+  useEffect(() => {
+    const cart = window.localStorage.getItem('cart');
+    setCart(JSON.parse(cart));
+  }, [])
+
+  useEffect(() => {
+    window.localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart])
+
+
   return (
     <>
-        <Router>
+      <Router>
+        <CartContext.Provider value={{ cart, setCart }}>
           <Navbar />
           <Routes>
 
@@ -19,8 +36,8 @@ function App() {
             <Route path="/product/details/:id" exact element={<SingleProduct />} ></Route>
 
           </Routes>
-
-        </Router>
+        </CartContext.Provider>
+      </Router>
     </>
   );
 }

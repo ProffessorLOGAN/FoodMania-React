@@ -4,7 +4,7 @@ import Products from '../components/Products'
 const Home = () => {
     return (
         <>
-            <div className='hero py-24'>
+            <div className='hero py-8'>
                 <div className='container mx-auto flex items-center justify-between'>
                     <div className='w-1/2 '>
                         <h6 className='text-lg'><em>best food you can order</em></h6>
@@ -20,7 +20,7 @@ const Home = () => {
 
             </div>
 
-            <div className='container mx-auto mt-16 pb-24'>
+            <div className='container mx-auto mt-8 pb-24'>
             <h1 className="text-lg font-bold my-8">Products</h1>
                 <Products />
             </div>
