@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.754ebb54.css",
-    "main.js": "/static/js/main.8b11b410.js",
-    "index.html": "/index.html",
-    "main.754ebb54.css.map": "/static/css/main.754ebb54.css.map",
-    "main.8b11b410.js.map": "/static/js/main.8b11b410.js.map"
+    "main.css": "/FoodMania-React/static/css/main.754ebb54.css",
+    "main.js": "/FoodMania-React/static/js/main.00f0f44c.js",
+    "index.html": "/FoodMania-React/index.html",
+    "main.754ebb54.css.map": "/FoodMania-React/static/css/main.754ebb54.css.map",
+    "main.00f0f44c.js.map": "/FoodMania-React/static/js/main.00f0f44c.js.map"
   },
   "entrypoints": [
     "static/css/main.754ebb54.css",
-    "static/js/main.8b11b410.js"
+    "static/js/main.00f0f44c.js"
   ]
 }
