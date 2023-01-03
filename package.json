@@ -1,6 +1,7 @@
 {
   "name": "foodmania",
   "version": "0.1.0",
+  "homepage": "https://ProffessorLOGAN.github.io/FoodMania-React",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
@@ -15,6 +16,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -38,5 +41,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://35.91.239.150:8000"
+  "proxy": "http://35.91.239.150:8000",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
