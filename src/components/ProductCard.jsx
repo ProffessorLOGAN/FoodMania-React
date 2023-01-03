@@ -49,7 +49,7 @@ const ProductCard = (props) => {
 
   return (
     <>
-      <Link to={`/product/details/${product._id}`}>
+      <Link to={`/api/product/details/${product._id}`}>
         <div key={product._id}>
           <img src={product.image} className="h-44 w-56" alt="foods" />
           <div className="text-center">

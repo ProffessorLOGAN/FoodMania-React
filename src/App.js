@@ -7,6 +7,7 @@ import Cart from './pages/Cart';
 import SingleProduct from './pages/SingleProduct';
 import { CartContext } from './CartContext';
 import { useEffect, useState } from 'react';
+import { getCart, storeCart } from './helpers';
 
 function App() {
 
@@ -14,13 +15,15 @@ function App() {
 
   //Fetch cart from local storage
   useEffect(() => {
-    const cart = window.localStorage.getItem('cart');
-    setCart(JSON.parse(cart));
+    getCart().then(cart => {
+      setCart(JSON.parse(cart));
+    })
+
   }, [])
 
   useEffect(() => {
-    window.localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart])
+    storeCart(JSON.stringify(cart))
+  }, [cart]);
 
 
   return (
